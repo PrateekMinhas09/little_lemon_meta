@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Highlights from './components/Highlights';
 import Testimonial from './components/Testimonial';
 import About from './components/About'
+import Footer from './components/Footer';
 function App() {
   return (
     <>
@@ -16,6 +17,8 @@ function App() {
       <Highlights/>
       <Testimonial/>
       <About/>
+
+    <Footer/>
     </div>
     </>
   );
