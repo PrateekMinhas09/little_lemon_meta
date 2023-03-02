@@ -3,6 +3,8 @@ import './App.css';
 import Navbar from './components/Navbar'
 import Hero from './components/Hero';
 import Highlights from './components/Highlights';
+import Testimonial from './components/Testimonial';
+import About from './components/About'
 function App() {
   return (
     <>
@@ -12,6 +14,8 @@ function App() {
       <Hero/>
 
       <Highlights/>
+      <Testimonial/>
+      <About/>
     </div>
     </>
   );
