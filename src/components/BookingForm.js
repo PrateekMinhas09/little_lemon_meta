@@ -44,7 +44,7 @@ function BookingForm()
       {availableOccasions.map((t)=>(<option key={t}>{t}</option>))}
  
    </select>
-   <input type="submit" value="Make Your reservation"/>
+   <input type="submit" value="Make Your reservation" onSubmit={handleSubmit}/>
 </form>
     </>)
 }
