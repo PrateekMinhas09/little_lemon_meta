@@ -25,7 +25,7 @@ function BookingForm()
 
 
     return(<>
-        <form style="display: grid; max-width: 200px; gap: 20px">
+       <form style={{ display: "grid", maxWidth: "200px", gap: "20px" }} onSubmit={handleSubmit}>
    <label htmlFor="res-date">Choose date</label>
    <input 
    type="date"
@@ -44,10 +44,10 @@ function BookingForm()
       {availableOccasions.map((t)=>(<option key={t}>{t}</option>))}
  
    </select>
-   <input type="submit" value="Make Your reservation" onSubmit={handleSubmit}/>
+   <input type="submit" value="Make Your reservation" />
 </form>
     </>)
 }
 
 
-export default BookingForm
+export default BookingForm;

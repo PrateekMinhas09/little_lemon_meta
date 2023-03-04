@@ -1,17 +1,18 @@
 import React from 'react'
+import { Link , Switch} from 'react-router-dom';
 
 
 function Navbar()
 {
 
-    return(<>
+    return(
     <div className="navbar">
         <ul className="nav-items">
         <img src="logo.png" alt="Logo" />
-        <a href="#">Home</a>
-        <a href="#">About </a>
+        <Link to="/">Home</Link>
+        <Link to="/about">About </Link>
         <a href="#">Menu</a>
-        <a href="#">Reservations</a>
+        <Link to="/reservations" >Reservations</Link>
         <a href="#">Order Online</a>
         <a href="#">Login</a>
 
@@ -20,7 +21,7 @@ function Navbar()
     </div>
     
     
-    </>)
+   )
 
 };
 
