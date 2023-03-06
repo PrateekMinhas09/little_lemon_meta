@@ -8,7 +8,7 @@ function Navbar()
     return(
     <div className="navbar">
         <ul className="nav-items">
-        <img src="logo.png" alt="Logo" />
+        <img src="src" alt="Logo" />
         <Link to="/">Home</Link>
         <Link to="/about">About </Link>
         <a href="#">Menu</a>

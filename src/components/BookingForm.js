@@ -15,10 +15,36 @@ function BookingForm({ availableTimes }) {
 
   const [submitted,setsubmitted]=useState(false);
 
+  const [submitAttempted, setSubmitAttempted] = useState(false);
+
+  const isFormValid = () => {
+    
+    console.log("isFormValid");
+      return (
+      
+        date &&
+        time &&
+        guests &&
+        occasion &&
+        guests >= 1 &&
+        guests <= 10
+       
+      );
+   
+   
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("isFormValid");
+   setSubmitAttempted(true);
+   if (isFormValid()) {
     console.log("Booking submitted");
    setsubmitted(true);
+    // handle form submission logic here
+  } else {
+    alert("Please fill out all fields and enter a valid number of guests.");
+  }
     // TODO: handle form submission
   };
   if (submitted) {
@@ -43,12 +69,14 @@ function BookingForm({ availableTimes }) {
           id="res-date"
           value={date}
           onChange={handleDateChange}
+          required
         />
         <label htmlFor="res-time">Choose time</label>
         <select
           id="res-time"
           value={time}
           onChange={(e) => setTime(e.target.value)}
+          required
         >
           {availableTimes.map((t) => (
             <option key={t}>{t}</option>
@@ -62,19 +90,25 @@ function BookingForm({ availableTimes }) {
           max="10"
           id="guests"
           value={guests}
-          onChange={(e) => setGuests(e.target.value)}
+          onChange={(e) => setGuests(e.target.value)
+            }
+          required
         />
         <label htmlFor="occasion">Occasion</label>
         <select
           id="occasion"
           value={occasion}
           onChange={(e) => setOccasion(e.target.value)}
+          required
         >
           {availableOccasions.map((t) => (
             <option key={t}>{t}</option>
           ))}
         </select>
-        <input type="submit" value="Make Your Reservation" />
+        <input type="submit" value="Make Your Reservation" disabled={!isFormValid()}/>
+        {submitAttempted && !isFormValid() && (
+        <p style={{ color: "red" }}>Please fill out all fields and enter a valid number of guests.</p>
+      )}
       </form>
     </>
   );
