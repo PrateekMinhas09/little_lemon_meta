@@ -1,4 +1,8 @@
 import React from "react";
+import GreekSalad from "../icons_assets/greek salad.jpg";
+import Hamburger from "../icons_assets/Hamburger.jpg";
+import LemonDessert from "../icons_assets/lemon dessert.jpg";
+import "./Highlights.css";
 
 
 function Highlights()
@@ -11,7 +15,7 @@ function Highlights()
       </div>
       <div className="highlight-cards">
         <div className="highlight-card">
-          <img src="img/item1.jpg" alt="Item 1" />
+          <img src={GreekSalad} alt="Item 1" />
           <div className="highlight-card-content">
             <div className="highlight-card-2">
             <h3>Item 1</h3>
@@ -22,7 +26,7 @@ function Highlights()
           </div>
         </div>
         <div className="highlight-card">
-          <img src="img/item2.jpg" alt="Item 2" />
+          <img src={Hamburger} alt="Item 2" />
           <div className="highlight-card-content">
           <div className="highlight-card-2">
             <h3>Item 2</h3>
@@ -33,7 +37,7 @@ function Highlights()
           </div>
         </div>
         <div className="highlight-card">
-          <img src="img/item3.jpg" alt="Item 3" />
+          <img src={LemonDessert} alt="Item 3" />
           <div className="highlight-card-content">
           <div className="highlight-card-2">
             <h3>Item 3</h3>

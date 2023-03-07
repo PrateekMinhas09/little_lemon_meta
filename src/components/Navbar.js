@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link , Switch} from 'react-router-dom';
-
+import Logo from "../icons_assets/Logo.svg"
 
 function Navbar()
 {
@@ -8,7 +8,7 @@ function Navbar()
     return(
     <div className="navbar">
         <ul className="nav-items">
-        <img src="src" alt="Logo" />
+        <img src={Logo} alt="Logo" />
         <Link to="/">Home</Link>
         <Link to="/about">About </Link>
         <a href="#">Menu</a>
